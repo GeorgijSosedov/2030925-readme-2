@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-11-15T16:42:34.270Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="fb9hlrE6FbSSqu2Eft4P" version="20.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-15T16:43:00.836Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="qaUaY6h5rOSvFV0SKAFz" version="20.5.3" type="github">
   <diagram id="0xGSt2mAOKLOEqlKk6a5" name="Страница 1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -174,7 +174,7 @@
         <mxCell id="QXgfvCawGBB2iEzWhZ4K-67" value="Подсчёт" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="20" y="420" width="100" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="QXgfvCawGBB2iEzWhZ4K-68" value="Микросервис ленты" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="QXgfvCawGBB2iEzWhZ4K-68" value="&lt;b&gt;Микросервис ленты&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="20" y="660" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="QXgfvCawGBB2iEzWhZ4K-69" value="Лента пользователя" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
@@ -186,7 +186,7 @@
             <mxPoint x="480" y="700" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QXgfvCawGBB2iEzWhZ4K-71" value="Микросервис подписок" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="QXgfvCawGBB2iEzWhZ4K-71" value="&lt;b&gt;Микросервис подписок&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="280" y="660" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="QXgfvCawGBB2iEzWhZ4K-72" value="Подписка на обновления пользователя" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
