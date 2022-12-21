@@ -34,7 +34,7 @@ export class BlogUserEntity implements User {
     }
 
     public fillEntity(blogUser: User) {
-        this._id = blogUser._id;
+        this._id = blogUser.id;
         this.mail = blogUser.mail;
         this.firstName = blogUser.firstName;
         this.lastName = blogUser.lastName;
