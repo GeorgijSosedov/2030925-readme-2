@@ -26,7 +26,7 @@ import { GetMongoDBConfig } from '../config/mongodb.config';
     AuthModule,
     BlogUserModule
   ],
-  controllers: [],
-  providers: [],
+  controllers: [AuthController],
+  providers: [AuthService],
 })
 export class AppModule {}
