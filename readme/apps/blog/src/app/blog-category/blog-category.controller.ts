@@ -1,6 +1,7 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Param, Patch } from "@nestjs/common";
+import { Body, Controller, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Patch, Query } from "@nestjs/common";
 import { fillObject } from "@readme/core";
 import { brotliDecompress } from "zlib";
+import { PostQuery } from "../blog-post/query/post.query";
 import { BlogCategoryService } from "./blog-category.service";
 import { CreateCategoryDto } from "./dto/create-category.dto";
 import { UpdateCategoryDto } from "./dto/update-category.dto";
@@ -13,9 +14,8 @@ export class BlogCategoryController {
     ) {}
 
     @Get('/:id')
-    async show(@Param('id') id: string) {
-        const categoryId = parseInt(id,10);
-        const existCategory = await this.blogCategoryService.getCategory(categoryId);
+    async show(@Param('id') id: number) {
+        const existCategory = await this.blogCategoryService.getCategory(id);
         return fillObject(CategoryRdo, existCategory);
     }
 
@@ -33,15 +33,13 @@ export class BlogCategoryController {
 
     @Get('/:id')
     @HttpCode(HttpStatus.NO_CONTENT)
-    async destroy(@Param('id') id: string) {
-        const categoryId = parseInt(id,10);
-        this.blogCategoryService.deleteCategory(categoryId);
+    async destroy(@Param('id') id: number) {
+        this.blogCategoryService.deleteCategory(id);
     }
 
     @Patch('/:id')
-    async update(@Param('id') id: string, @Body() dto: UpdateCategoryDto) {
-        const categoryId = parseInt(id,10);
-        const updatedCategory = await this.blogCategoryService.updateCategory(categoryId, dto);
+    async update(@Param('id') id: number, @Body() dto: UpdateCategoryDto) {
+        const updatedCategory = await this.blogCategoryService.updateCategory(id, dto);
         return fillObject(CategoryRdo, updatedCategory);
     }
 }
