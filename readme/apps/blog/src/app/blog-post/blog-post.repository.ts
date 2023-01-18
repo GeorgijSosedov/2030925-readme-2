@@ -2,6 +2,7 @@ import { Injectable } from "@nestjs/common";
 import { CRUDRepository, Post } from "@readme/core";
 import { PrismaService } from "../prisma/prisma.service";
 import { BlogPostEntity } from "./blog-post.entity";
+import { PostQuery } from "./query/post.query";
 
 @Injectable()
 export class BlogPostRepository implements CRUDRepository<BlogPostEntity, number , Post> {
@@ -45,12 +46,28 @@ export class BlogPostRepository implements CRUDRepository<BlogPostEntity, number
         });
     }
 
-    public async find(): Promise<Post[]> {
+    public async find({limit,categories,sortDirection,page}: PostQuery): Promise<Post[]> {
         return this.prisma.post.findMany({
-            include: {
-                comments: true,
-                categories: true
+            where: {
+                categories: {
+                  some: {
+                    id: {
+                      in: categories
+                    }
+                  }
+                }
+              },
+              take: limit,
+        include: {
+            comments: true,
+            categories: true,
+        },
+        orderBy: [
+            {
+              createdAt: sortDirection
             }
+          ],
+          skip: page > 0 ? limit * (page - 1) : undefined,
         });
     }
 
