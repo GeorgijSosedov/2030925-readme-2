@@ -34,8 +34,9 @@ export class CreateUserDTO {
         description: 'Дата регистрации пользователя',
         example: '05.04.2004'
     })
-    @IsISO8601({
-        message: AUTH_USER_BIRTH_DATE_NOT_VALID
-    })
+    @IsISO8601(
+        {},
+        {message: AUTH_USER_BIRTH_DATE_NOT_VALID}
+    )
     public regDate: string;
 }
