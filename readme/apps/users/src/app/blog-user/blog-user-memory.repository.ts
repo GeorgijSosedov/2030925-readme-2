@@ -35,7 +35,7 @@ export class BlogUserMemoryRepository implements CRUDRepository<BlogUserEntity, 
       }
 
     public async update(id: string, item: BlogUserEntity): Promise<User> {
-        this.repository[id] = {...item.toObject(), _id: id };
+        this.repository[id] = {...item.toObject(), id: id };
         return this.findById(id);
       }
 }

@@ -45,7 +45,7 @@ export class AuthService {
               mail: createdUser.mail,
               firstName: createdUser.firstName,
               lastName: createdUser.lastName,
-              userId: createdUser._id.toString(),
+              userId: createdUser.id.toString(),
             }
         );
 
@@ -74,7 +74,7 @@ export class AuthService {
     
     async loginUser(user: User) {
         const payload = {
-          sub: user._id,
+          sub: user.id,
           email: user.mail,
           role: user.role,
           firstname: user.firstName,
