@@ -3,8 +3,8 @@ import { InjectModel } from "@nestjs/mongoose";
 import { CRUDRepository } from "@readme/core";
 import { User } from "@readme/shared-types";
 import { Model } from "mongoose";
-import { BlogUserEntity } from "./blog-user.entity.js";
-import { BlogUserModel } from "./blog-user.model.js";
+import { BlogUserEntity } from "./blog-user.entity";
+import { BlogUserModel } from "./blog-user.model";
 
 @Injectable()
 export class BlogUserRepository implements CRUDRepository<BlogUserEntity,string,User> {
